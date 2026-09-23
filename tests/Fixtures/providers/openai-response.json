@@ -1,0 +1,23 @@
+{
+  "id": "resp_01",
+  "object": "response",
+  "created_at": 1758540000,
+  "status": "completed",
+  "error": null,
+  "incomplete_details": null,
+  "model": "gpt-5.6-luna-2026-06-01",
+  "output": [
+    {"type": "reasoning", "id": "rs_01", "summary": []},
+    {
+      "type": "message",
+      "id": "msg_01",
+      "status": "completed",
+      "role": "assistant",
+      "content": [{"type": "output_text", "text": "{\"department\":{\"probabilities\":{\"returns\":0.05,\"shipping\":0.04,\"billing\":0.91,\"other\":0.0}},\"bug_severity\":{\"probabilities\":{\"0\":0.0,\"1\":0.57,\"2\":0.43}},\"is_human_escalation\":{\"noul\":0.99},\"same_as_record_18\":{\"noul\":0.12}}", "annotations": []}]
+    }
+  ],
+  "reasoning": {"effort": "none", "summary": null},
+  "store": false,
+  "text": {"format": {"type": "json_schema", "name": "decision", "strict": true}},
+  "usage": {"input_tokens": 512, "input_tokens_details": {"cached_tokens": 0}, "output_tokens": 96, "output_tokens_details": {"reasoning_tokens": 0}, "total_tokens": 608}
+}

@@ -1,0 +1,10 @@
+{
+  "id": "msg_01ABC",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-haiku-4-5-20251001",
+  "content": [{"type": "text", "text": "{\"department\":{\"probabilities\":{\"returns\":0.05,\"shipping\":0.04,\"billing\":0.91,\"other\":0.0}},\"bug_severity\":{\"probabilities\":{\"0\":0.0,\"1\":0.57,\"2\":0.43}},\"is_human_escalation\":{\"noul\":0.99},\"same_as_record_18\":{\"noul\":0.12}}"}],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {"input_tokens": 640, "output_tokens": 110, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0}
+}

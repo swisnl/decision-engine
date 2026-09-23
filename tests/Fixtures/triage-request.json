@@ -1,0 +1,37 @@
+{
+  "state": {
+    "message": "I was charged twice for order #1234 and nobody answers the phone. I want to talk to a real person.",
+    "order": {"id": 1234, "total": 89.9, "currency": "EUR"}
+  },
+  "model": "jev-latest",
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "Which team should handle this?",
+      "criteria": {
+        "returns": {"what": "Exchanges, wrong or damaged items", "not_for": "Refund requests", "examples": ["wrong size", "arrived broken"]},
+        "shipping": "Delivery status, delays, lost packages",
+        "billing": "Charges, invoices, payment problems",
+        "other": null
+      }
+    },
+    "bug_severity": {
+      "type": "score",
+      "instructions": "How severe is the reported issue?",
+      "criteria": [
+        "Cosmetic; no impact to functionality",
+        "Broken or degraded feature, but workaround exists",
+        {"what": "Blocking issue; no workaround exists", "examples": ["cannot log in", "data loss"]}
+      ]
+    },
+    "is_human_escalation": {
+      "type": "noul",
+      "instructions": "Is the customer asking for a human agent?",
+      "criteria": {"true": "Explicitly asks for a person, agent or call", "false": "Only describes the problem"}
+    },
+    "same_as_record_18": {
+      "type": "noul",
+      "instructions": {"potential_duplicate": {"id": 18, "email": "a@example.com"}, "question": "Is this the same customer as `potential_duplicate`?"}
+    }
+  }
+}

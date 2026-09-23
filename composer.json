@@ -1,0 +1,73 @@
+{
+    "name": "swis/decision-engine",
+    "description": "Typed, probabilistic decisions (Choice / Score / Noul) for System One tasks, powered by TypeSafe Jev, with OpenAI and Anthropic as alternative engines. Framework-agnostic with a Laravel bridge.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["typesafe", "jev", "system-one", "decision", "classification", "llm", "laravel"],
+    "authors": [
+        {
+            "name": "SWIS",
+            "email": "joris@swis.nl"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.8|^8.0",
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^4.0",
+        "phpstan/phpstan": "^2.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "vlucas/phpdotenv": "^5.7"
+    },
+    "suggest": {
+        "illuminate/support": "Required to use the Laravel bridge (^11|^12|^13).",
+        "psr/http-client": "Required to use the Psr18Transport adapter."
+    },
+    "autoload": {
+        "psr-4": {
+            "Swis\\DecisionEngine\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Swis\\DecisionEngine\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Swis\\DecisionEngine\\Laravel\\DecisionEngineServiceProvider"
+            ],
+            "aliases": {
+                "Decision": "Swis\\DecisionEngine\\Laravel\\Facades\\Decision"
+            }
+        },
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "lint": "vendor/bin/pint --test",
+        "fix": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse --ansi --no-progress --debug",
+        "check": ["@lint", "@analyse", "@test"]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "msg_02DEF",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-haiku-4-5-20251001",
+  "content": [
+    {"type": "text", "text": "Recording the decision."},
+    {"type": "tool_use", "id": "toolu_01", "name": "record_decision", "input": {"department": {"probabilities": {"returns": 0.05, "shipping": 0.04, "billing": 0.91, "other": 0.0}}, "bug_severity": {"probabilities": {"0": 0.0, "1": 0.57, "2": 0.43}}, "is_human_escalation": {"noul": 0.99}, "same_as_record_18": {"noul": 0.12}}}
+  ],
+  "stop_reason": "tool_use",
+  "usage": {"input_tokens": 700, "output_tokens": 130}
+}

@@ -1,0 +1,16 @@
+includes:
+    - extension.neon
+
+parameters:
+    level: max
+    paths:
+        - src
+        - config
+        - tests/PHPStan
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: true
+    ignoreErrors:
+        # Consumer-facing test helper trait; nothing inside this package uses it.
+        -
+            identifier: trait.unused
+            path: src/Testing/InteractsWithDecisions.php

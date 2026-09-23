@@ -1,0 +1,120 @@
+{
+    "type": "object",
+    "properties": {
+        "department": {
+            "type": "object",
+            "properties": {
+                "probabilities": {
+                    "type": "object",
+                    "description": "Probability of each option; must sum to 1.",
+                    "properties": {
+                        "returns": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                        },
+                        "shipping": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                        },
+                        "billing": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                        },
+                        "other": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                        }
+                    },
+                    "required": [
+                        "returns",
+                        "shipping",
+                        "billing",
+                        "other"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "probabilities"
+            ],
+            "additionalProperties": false
+        },
+        "bug_severity": {
+            "type": "object",
+            "properties": {
+                "probabilities": {
+                    "type": "object",
+                    "description": "Probability of each level index (0 = lowest); must sum to 1.",
+                    "properties": {
+                        "0": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                        },
+                        "1": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                        },
+                        "2": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                        }
+                    },
+                    "required": [
+                        "0",
+                        "1",
+                        "2"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "probabilities"
+            ],
+            "additionalProperties": false
+        },
+        "is_human_escalation": {
+            "type": "object",
+            "properties": {
+                "noul": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Probability that the answer is yes."
+                }
+            },
+            "required": [
+                "noul"
+            ],
+            "additionalProperties": false
+        },
+        "same_as_record_18": {
+            "type": "object",
+            "properties": {
+                "noul": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Probability that the answer is yes."
+                }
+            },
+            "required": [
+                "noul"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "department",
+        "bug_severity",
+        "is_human_escalation",
+        "same_as_record_18"
+    ],
+    "additionalProperties": false
+}

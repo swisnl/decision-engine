@@ -1,0 +1,26 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "department": {
+      "type": "choice",
+      "choice": "billing",
+      "confidence": 0.82,
+      "probabilities": {"returns": 0.05, "shipping": 0.04, "billing": 0.91, "other": 0.0}
+    },
+    "bug_severity": {
+      "type": "score",
+      "score": 1.43,
+      "confidence": 0.35,
+      "legend": {
+        "0": "Cosmetic; no impact to functionality",
+        "1": "Broken or degraded feature, but workaround exists",
+        "2": "Blocking issue; no workaround exists"
+      },
+      "probabilities": {"0": 0.0, "1": 0.57, "2": 0.43}
+    },
+    "is_human_escalation": {"type": "noul", "noul": 0.99},
+    "same_as_record_18": {"type": "noul", "noul": 0.12},
+    "mystery": {"type": "vector", "values": [0.1, 0.2], "confidence": 0.5}
+  },
+  "usage": {"input_tokens": 360, "output_tokens": 39}
+}

@@ -1,0 +1,1 @@
+{"id": "msg_04", "type": "message", "role": "assistant", "model": "claude-haiku-4-5-20251001", "content": [{"type": "text", "text": "{\"department\":{\"probab"}], "stop_reason": "max_tokens", "usage": {"input_tokens": 600, "output_tokens": 320}}

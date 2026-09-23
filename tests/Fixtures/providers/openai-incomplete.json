@@ -1,0 +1,9 @@
+{
+  "id": "resp_03",
+  "object": "response",
+  "status": "incomplete",
+  "incomplete_details": {"reason": "max_output_tokens"},
+  "model": "gpt-5.6-luna-2026-06-01",
+  "output": [],
+  "usage": {"input_tokens": 400, "output_tokens": 16}
+}

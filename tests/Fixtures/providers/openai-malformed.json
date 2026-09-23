@@ -1,0 +1,10 @@
+{
+  "id": "resp_04",
+  "object": "response",
+  "status": "completed",
+  "model": "gpt-5.6-luna-2026-06-01",
+  "output": [
+    {"type": "message", "id": "msg_04", "status": "completed", "role": "assistant", "content": [{"type": "output_text", "text": "{\"department\":{\"probabilities\":{\"returns\":0.2,\"shipping\":0.2,\"billing\":1.4,\"unexpected\":0.9}},\"bug_severity\":{\"probabilities\":{\"0\":0,\"1\":0,\"2\":0}},\"is_human_escalation\":{\"noul\":1.7},\"same_as_record_18\":{\"noul\":\"0.25\"}}"}]}
+  ],
+  "usage": {"input_tokens": 500, "output_tokens": 80}
+}
